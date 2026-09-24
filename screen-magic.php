@@ -8,15 +8,19 @@ $nomeFilme = "Star Wars";
 
 $anoLancamento = 2022;
 
-$qntdNotas = $argc - 1;
+$qntdNotas = $argc - 2;
 $somaDeNotas = 0;
 
-for ($contador = 1; $contador < $argc; $contador++) {
-    $somaDeNotas += $argv[$contador];
-    }
-    
-$notaFilme = $somaDeNotas / $qntdNotas;
+//for ($contador = 1; $contador < $argc; $contador++) {
+//    $somaDeNotas += $argv[$contador];
+//}
 
+$exemploContador =1;
+while ($argv[$exemploContador] != 0) {
+    $somaDeNotas += $argv[$exemploContador++];
+}
+
+$notaFilme = $somaDeNotas / $qntdNotas;
 $planoPrime = true;
 $incluidoNoPlano = $planoPrime || $anoLancamento < 2020;
 

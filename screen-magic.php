@@ -1,5 +1,20 @@
 <?php 
 
+function exibeMensagemLancamento(int $ano): void {
+    if ($ano > 2022) {
+        echo "O filme é um lançamento.\n";
+    } elseif ($ano > 2020 && $ano <= 2022) {
+        echo "O filme ainda é novo, mas não é um lançamento.\n";
+    } else {
+    echo "O filme é antigo.\n";
+}
+}
+
+function incluidoNoPlano (bool $planoPrime, int $anoLancamento): bool {
+    return $planoPrime || $anoLancamento < 2020;
+}
+
+
 echo "Bem-vindo ao screen magic!\n";
 
 $nomeFilme = "Top Gun: Maverick";
@@ -22,18 +37,13 @@ for ($contador = 1; $contador < $argc; $contador++) {
 
 $notaFilme = array_sum($notas) / $qntdNotas;
 $planoPrime = true;
-$incluidoNoPlano = $planoPrime || $anoLancamento < 2020;
+$incluidoNoPlano = incluidoNoPlano($planoPrime, $anoLancamento);
 
 //echo "$anoLancamento";
 echo $notaFilme."\n";
 
-if ($anoLancamento > 2022) {
-    echo "O filme é um lançamento.\n";
-} elseif ($anoLancamento > 2020 &&  $anoLancamento <= 2022) {
-    echo "O filme ainda é novo, mas não é um lançamento.\n";
-} else {
-    echo "O filme é antigo.\n";
-}
+//exibeMensagemLancamento($anoLancamento);
+exibeMensagemLancamento(2026);
 
 $genero = match ($nomeFilme) {
     "Top Gun: Maverick" => "Ação",
@@ -44,11 +54,18 @@ $genero = match ($nomeFilme) {
 
 //echo "O filme $nomeFilme é do gênero $genero.\n";
 
-echo $argc;
-
 $filmeArray = [
     "nome" => "Top Gun: Maverick",
     "anoLancamento" => 2022,
     "genero" => "Ação",
     "nota" => 8.5,
 ];
+
+var_dump($notas);
+sort($notas);
+var_dump($notas);
+min($notas);
+echo "A menor nota é: ".min($notas)."\n";
+
+max($notas);
+echo "A maior nota é: ".max($notas)."\n";

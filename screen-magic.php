@@ -69,3 +69,9 @@ echo "A menor nota é: ".min($notas)."\n";
 
 max($notas);
 echo "A maior nota é: ".max($notas)."\n";
+
+var_dump($filmeArray["nome"]);
+$posicaoDoisPontos = strpos($filmeArray["nome"], ":");
+var_dump($posicaoDoisPontos);
+
+var_dump(substr($filmeArray["nome"], 0, $posicaoDoisPontos));

@@ -67,3 +67,4 @@ $filmeComoString = json_encode($filmeArray);
 echo $filmeComoString."\n";
 
 file_put_contents(__DIR__ . "/filme.json", $filmeComoString);
+

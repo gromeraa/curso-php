@@ -1,0 +1,1 @@
+<h1>Sucesso! O filme <?php echo $_GET["filme"]; ?> foi cadastrado com sucesso!</h1>

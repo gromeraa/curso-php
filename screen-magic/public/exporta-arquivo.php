@@ -10,3 +10,5 @@ $filme = [
 ];
 
 file_put_contents(__DIR__ . "/filme.json", json_encode($filme));
+
+header ('Location: /sucesso.php?filme=' . $filme["nome"]);

@@ -41,12 +41,7 @@ $genero = match ($nomeFilme) {
 
 //echo "O filme $nomeFilme é do gênero $genero.\n";
 
-$filmeArray = [
-    "nome" => "Top Gun: Maverick",
-    "anoLancamento" => 2022,
-    "genero" => "Ação",
-    "nota" => 8.5,
-];
+$filmeArray = criaFilme (nome: "Top Gun: Maverick", anoLancamento: 2022, genero: "Ação", nota: 8.5);
 
 var_dump($notas);
 sort($notas);

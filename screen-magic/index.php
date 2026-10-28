@@ -1,5 +1,6 @@
 <?php 
 
+require __DIR__ . "/src/model/Filme.php";
 require __DIR__ . "/src/funcoes.php";
 
 echo "Bem-vindo ao screen magic!\n";
@@ -43,6 +44,11 @@ $genero = match ($nomeFilme) {
 
 $filmeArray = criaFilme (nome: "Top Gun: Maverick", anoLancamento: 2022, genero: "Ação", nota: 8.5);
 
+echo $filmeArray->nome."\n";
+echo $filmeArray->anoLancamento."\n";
+echo $filmeArray->genero."\n";
+echo $filmeArray->nota."\n";
+
 var_dump($notas);
 sort($notas);
 var_dump($notas);
@@ -52,11 +58,11 @@ echo "A menor nota é: ".min($notas)."\n";
 max($notas);
 echo "A maior nota é: ".max($notas)."\n";
 
-var_dump($filmeArray["nome"]);
-$posicaoDoisPontos = strpos($filmeArray["nome"], ":");
+var_dump($filmeArray->nome);
+$posicaoDoisPontos = strpos($filmeArray->nome, ":");
 var_dump($posicaoDoisPontos);
 
-var_dump(substr($filmeArray["nome"], 0, $posicaoDoisPontos));
+var_dump(substr($filmeArray->nome, 0, $posicaoDoisPontos));
 
 $filmeComoString = json_encode($filmeArray);
 echo $filmeComoString."\n";

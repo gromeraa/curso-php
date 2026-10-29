@@ -1,13 +1,13 @@
 <?php
 
 class Filme {
-    private string $nome;
-    private int $anoLancamento;
-    private string $genero;
     private array $notas;
 
-    public function __construct(string $nome, int $anoLancamento, string $genero) 
-    {
+    public function __construct(
+        private string $nome,
+        private int $anoLancamento,
+        private string $genero
+        ) {
         $this->nome = $nome;
         $this->anoLancamento = $anoLancamento;
         $this->genero = $genero;

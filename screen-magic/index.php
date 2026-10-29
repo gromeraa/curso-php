@@ -1,5 +1,6 @@
 <?php
 
+require __DIR__ . "/src/Calculation/CalculadoraDeMaratona.php";
 require __DIR__ . "/src/Model/Titulo.php";
 require __DIR__ . "/src/Model/Serie.php";
 require __DIR__ . "/src/model/Filme.php";
@@ -53,3 +54,10 @@ $serie->avalia(8);
 $serie->avalia(6);
 
 var_dump($serie);
+
+$calculadora = new CalculadoraDeMaratona();
+$calculadora->inclui($filme);
+$calculadora->inclui($serie);
+$duracaoTotal = $calculadora->duracao();
+
+echo "Duração total da maratona: {$duracaoTotal} minutos\n";

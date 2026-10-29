@@ -1,12 +1,14 @@
 <?php
 
+require __DIR__ . "/src/Model/Titulo.php";
+require __DIR__ . "/src/Model/Serie.php";
 require __DIR__ . "/src/model/Filme.php";
 require __DIR__ . "/src/Model/Genero.php";
 require __DIR__ . "/src/funcoes.php";
 
 echo "Bem-vindo ao screen magic!\n";
 
-$filme = new Filme(
+$filme = new Titulo(
     "Star Wars: O Império Contra-Ataca",
     1980,
     Genero::FicçãoCientífica,

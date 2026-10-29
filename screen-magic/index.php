@@ -1,6 +1,7 @@
 <?php
 
 require __DIR__ . "/src/model/Filme.php";
+require __DIR__ . "/src/Model/Genero.php";
 require __DIR__ . "/src/funcoes.php";
 
 echo "Bem-vindo ao screen magic!\n";
@@ -8,7 +9,7 @@ echo "Bem-vindo ao screen magic!\n";
 $filme = new Filme(
     "Star Wars: O Império Contra-Ataca",
     1980,
-    "Ficção científica"
+    Genero::FicçãoCientífica,
 );
 
 $filme->avalia(10);

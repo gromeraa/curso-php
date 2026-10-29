@@ -5,10 +5,11 @@ require __DIR__ . "/src/funcoes.php";
 
 echo "Bem-vindo ao screen magic!\n";
 
-$filme = new Filme();
-$filme->nome = "Clone Wars";
-$filme->anoLancamento = 2008;
-$filme->genero = "Animação";
+$filme = new Filme(
+    "Star Wars: O Império Contra-Ataca",
+    1980,
+    "Ficção científica"
+);
 
 $filme->avalia(10);
 $filme->avalia(10);
@@ -17,3 +18,5 @@ $filme->avalia(5);
 
 var_dump($filme);
 echo $filme->media()."\n";
+
+echo $filme->anoLancamento() . "\n";
